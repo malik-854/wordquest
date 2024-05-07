@@ -1,0 +1,119 @@
+/* styles.css */
+
+/* Set body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #cfe2f3; /* Some shade of blue */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Adjust game container */
+.game-container {
+    text-align: center;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #fdcb6e, #81ecec, #ff7675) 1; /* Triple tone border */
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #fdcb6e, #81ecec, #ff7675); /* Vibrant triple tone background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align vertically */
+    align-items: center; /* Center align horizontally */
+}
+
+/* Adjust title to "WORDQUEST" */
+.game-container h1 {
+    font-size: 24px;
+    color: #ffffff; /* White color */
+    margin-bottom: auto; /* Pushes it to the top */
+}
+
+/* Adjust content alignment */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Adjust word list styles */
+.word-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding for spacing inside the box */
+    border: 2px solid #1f3a93; /* Dark blue border */
+    border-radius: 8px; /* Rounded corners */
+    background: linear-gradient(45deg, #fdcb6e, #81ecec, #ff7675); /* Vibrant triple tone background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
+}
+
+.word-list h3 {
+    margin-bottom: 10px;
+}
+
+.word-list ul {
+    list-style: disc; /* Bullet points */
+    padding-left: 20px; /* Indentation for bullet points */
+}
+
+.word-list li {
+    font-size: 16px;
+    color: #5a5a5a;
+    margin-bottom: 5px; /* Add spacing between bullet points */
+}
+
+/* Adjust word grid */
+.word-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    gap: 2px;
+    margin-right: 20px; /* Spacing between the grid and the word list */
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #fdcb6e, #81ecec, #ff7675) 1; /* Triple tone border */
+    border-radius: 8px; /* Rounded corners */
+    background: linear-gradient(45deg, #fdcb6e, #81ecec, #ff7675); /* Vibrant triple tone background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
+}
+
+.word-grid div {
+    width: 30px;
+    height: 30px;
+    background: #e1e1ff; /* Default light color, will override below */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+
+/* Add specific colors to grid cells based on their state */
+.word-grid div:nth-child(odd) { background-color: #FFD700; } /* Example gold color for odd cells */
+.word-grid div:nth-child(even) { background-color: #4CAF50; } /* Example green color for even cells */
+.word-grid div.selected { background-color: #add8e6; } /* Light blue for selected cells */
+.word-grid div.found { background-color: #FF6347; } /* Tomato color for found words */
+
+/* Adjust submit button */
+.submit-button {
+    margin-top: auto; /* Pushes it to the bottom */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
